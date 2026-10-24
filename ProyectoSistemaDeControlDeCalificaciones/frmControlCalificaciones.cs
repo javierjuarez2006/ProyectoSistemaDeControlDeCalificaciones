@@ -13,12 +13,72 @@ namespace ProyectoSistemaDeControlDeCalificaciones
         public frmControlCalificaciones()
         {
             InitializeComponent();
-            // Nota: Ya quitamos el evento automático de la tabla para que no cargue nada al solo hacer clic.
         }
 
         private void frmControlCalificaciones_Load(object sender, EventArgs e)
         {
+            // Paso 1: Crea la base de datos y las tablas automáticamente si no existen en la PC del compañero
+            InicializarBaseDeDatosAutomatica();
+
+            // Paso 2: Carga los datos con normalidad
             CargarDatosEnTabla();
+        }
+
+        private void InicializarBaseDeDatosAutomatica()
+        {
+            try
+            {
+                // Conexión a 'master' para verificar o crear la base de datos
+                string conexionMaster = @"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;";
+
+                using (SqlConnection conexion = new SqlConnection(conexionMaster))
+                {
+                    conexion.Open();
+                    string queryCheck = "SELECT database_id FROM sys.databases WHERE Name = 'ControlCalificaciones'";
+                    SqlCommand cmdCheck = new SqlCommand(queryCheck, conexion);
+                    var existe = cmdCheck.ExecuteScalar();
+
+                    // Si la base de datos no existe en la PC, se crea al instante
+                    if (existe == null)
+                    {
+                        string queryCreate = "CREATE DATABASE ControlCalificaciones;";
+                        SqlCommand cmdCreate = new SqlCommand(queryCreate, conexion);
+                        cmdCreate.ExecuteNonQuery();
+                    }
+                }
+
+                // Conexión a la base de datos para asegurar la creación de las tablas si faltan
+                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+                {
+                    conexion.Open();
+                    string queryTablas = @"
+                        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Estudiantes' and xtype='U')
+                        CREATE TABLE Estudiantes (
+                            IdEstudiante INT IDENTITY(1,1) PRIMARY KEY,
+                            Carnet VARCHAR(20) UNIQUE NOT NULL,
+                            Nombre VARCHAR(50) NOT NULL,
+                            Apellido VARCHAR(50) NOT NULL
+                        );
+
+                        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Calificaciones' and xtype='U')
+                        CREATE TABLE Calificaciones (
+                            IdCalificacion INT IDENTITY(1,1) PRIMARY KEY,
+                            IdEstudiante INT FOREIGN KEY REFERENCES Estudiantes(IdEstudiante),
+                            IdMateria INT DEFAULT 1,
+                            Nota DECIMAL(5,2) NOT NULL
+                        );";
+
+                    SqlCommand cmdTablas = new SqlCommand(queryTablas, conexion);
+                    cmdTablas.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al configurar la base de datos automáticamente: " + ex.Message,
+                                "Error de Inicialización",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
 
         private void CargarDatosEnTabla()
@@ -174,7 +234,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             }
         }
 
-        // BOTÓN EDITAR: Aquí ocurre la magia. Seleccionas la fila en la tabla, haces clic en Editar, 
+        // BOTÓN EDITAR: Seleccionas la fila en la tabla, haces clic en Editar, 
         // los datos suben a las cajas de texto y el botón Guardar se convierte en "Actualizar".
         private void btnEditar_Click(object sender, EventArgs e)
         {
