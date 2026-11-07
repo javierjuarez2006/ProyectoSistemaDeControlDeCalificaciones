@@ -9,75 +9,55 @@ namespace ProyectoSistemaDeControlDeCalificaciones
     public partial class frmControlCalificaciones : Form
     {
         private readonly string cadenaConexion = @"Server=(localdb)\MSSQLLocalDB;Database=ControlCalificaciones;Trusted_Connection=True;";
+        private string rolActual = "";
 
-        public frmControlCalificaciones()
+        // Constructor que recibe el rol desde el Login
+        public frmControlCalificaciones(string rol)
         {
             InitializeComponent();
+            rolActual = rol;
+        }
+
+        // Constructor por defecto (por si se abre directamente)
+        public frmControlCalificaciones() : this("Profesor")
+        {
         }
 
         private void frmControlCalificaciones_Load(object sender, EventArgs e)
         {
-            // Paso 1: Crea la base de datos y las tablas automáticamente si no existen en la PC del compañero
-            InicializarBaseDeDatosAutomatica();
-
-            // Paso 2: Carga los datos con normalidad
+            // Paso 1: Carga los datos en el DataGridView
             CargarDatosEnTabla();
+
+            // Paso 2: Aplica restricciones según el rol (Profesor o Alumno)
+            AplicarPermisosSegunRol();
         }
 
-        private void InicializarBaseDeDatosAutomatica()
+        private void AplicarPermisosSegunRol()
         {
-            try
+            if (rolActual == "Alumno")
             {
-                // Conexión a 'master' para verificar o crear la base de datos
-                string conexionMaster = @"Server=(localdb)\MSSQLLocalDB;Database=master;Trusted_Connection=True;";
+                // Si es Alumno, ocultamos y deshabilitamos herramientas de mantenimiento (CRUD)
+                btnGuardar.Enabled = false;
+                btnGuardar.Visible = false;
 
-                using (SqlConnection conexion = new SqlConnection(conexionMaster))
-                {
-                    conexion.Open();
-                    string queryCheck = "SELECT database_id FROM sys.databases WHERE Name = 'ControlCalificaciones'";
-                    SqlCommand cmdCheck = new SqlCommand(queryCheck, conexion);
-                    var existe = cmdCheck.ExecuteScalar();
+                btnEliminar.Enabled = false;
+                btnEliminar.Visible = false;
 
-                    // Si la base de datos no existe en la PC, se crea al instante
-                    if (existe == null)
-                    {
-                        string queryCreate = "CREATE DATABASE ControlCalificaciones;";
-                        SqlCommand cmdCreate = new SqlCommand(queryCreate, conexion);
-                        cmdCreate.ExecuteNonQuery();
-                    }
-                }
+                btnEditar.Enabled = false;
+                btnEditar.Visible = false;
 
-                // Conexión a la base de datos para asegurar la creación de las tablas si faltan
-                using (SqlConnection conexion = new SqlConnection(cadenaConexion))
-                {
-                    conexion.Open();
-                    string queryTablas = @"
-                        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Estudiantes' and xtype='U')
-                        CREATE TABLE Estudiantes (
-                            IdEstudiante INT IDENTITY(1,1) PRIMARY KEY,
-                            Carnet VARCHAR(20) UNIQUE NOT NULL,
-                            Nombre VARCHAR(50) NOT NULL,
-                            Apellido VARCHAR(50) NOT NULL
-                        );
+                // Bloqueamos las cajas de texto para que no pueda modificar nada
+                txtCarnet.ReadOnly = true;
+                txtNombre.ReadOnly = true;
+                txtApellido.ReadOnly = true;
+                txtNota.ReadOnly = true;
+                cmbEstado.Enabled = false;
 
-                        IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Calificaciones' and xtype='U')
-                        CREATE TABLE Calificaciones (
-                            IdCalificacion INT IDENTITY(1,1) PRIMARY KEY,
-                            IdEstudiante INT FOREIGN KEY REFERENCES Estudiantes(IdEstudiante),
-                            IdMateria INT DEFAULT 1,
-                            Nota DECIMAL(5,2) NOT NULL
-                        );";
-
-                    SqlCommand cmdTablas = new SqlCommand(queryTablas, conexion);
-                    cmdTablas.ExecuteNonQuery();
-                }
+                this.Text = "Sistema de Control de Calificaciones - [Vista de Alumno: Solo Lectura]";
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error al configurar la base de datos automáticamente: " + ex.Message,
-                                "Error de Inicialización",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                this.Text = "Sistema de Control de Calificaciones - [Vista de Profesor: Control Total]";
             }
         }
 
@@ -97,9 +77,9 @@ namespace ProyectoSistemaDeControlDeCalificaciones
                                             WHEN c.Nota >= 6.00 THEN 'Aprobado'
                                             ELSE 'Reprobado'
                                         END AS Estado
-                                     FROM Calificaciones c
-                                     INNER JOIN Estudiantes e ON c.IdEstudiante = e.IdEstudiante
-                                     ORDER BY e.Apellido, e.Nombre;";
+                                   FROM Calificaciones c
+                                   INNER JOIN Estudiantes e ON c.IdEstudiante = e.IdEstudiante
+                                   ORDER BY e.Apellido, e.Nombre;";
 
                     SqlDataAdapter adaptador = new SqlDataAdapter(query, conexion);
                     DataTable dt = new DataTable();
@@ -234,8 +214,6 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             }
         }
 
-        // BOTÓN EDITAR: Seleccionas la fila en la tabla, haces clic en Editar, 
-        // los datos suben a las cajas de texto y el botón Guardar se convierte en "Actualizar".
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dgvEstudiantes.CurrentRow == null || dgvEstudiantes.CurrentRow.Index < 0)
@@ -253,7 +231,6 @@ namespace ProyectoSistemaDeControlDeCalificaciones
                 txtNota.Text = fila.Cells["Nota"].Value.ToString();
                 cmbEstado.Text = fila.Cells["Estado"].Value.ToString();
 
-                // Cambiamos el texto del botón Guardar a "Actualizar"
                 btnGuardar.Text = "Actualizar";
             }
         }
@@ -312,7 +289,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             txtApellido.Clear();
             txtNota.Clear();
             cmbEstado.SelectedIndex = -1;
-            btnGuardar.Text = "Guardar"; // Regresa el botón a su estado normal
+            btnGuardar.Text = "Guardar";
             txtCarnet.Focus();
         }
 
