@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ProyectoSistemaDeControlDeCalificaciones
 {
-    public partial class frmControlCalificaciones : Form
+    public partial class frmControlCalificaciones : MetroFramework.Forms.MetroForm
     {
         private readonly string cadenaConexion = @"Server=(localdb)\MSSQLLocalDB;Database=ControlCalificaciones;Trusted_Connection=True;";
         private string rolActual = "";

@@ -57,19 +57,20 @@
             // dgvEstudiantes
             // 
             this.dgvEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstudiantes.Location = new System.Drawing.Point(37, 6);
+            this.dgvEstudiantes.Location = new System.Drawing.Point(30, 52);
             this.dgvEstudiantes.Name = "dgvEstudiantes";
-            this.dgvEstudiantes.Size = new System.Drawing.Size(769, 267);
+            this.dgvEstudiantes.Size = new System.Drawing.Size(783, 278);
             this.dgvEstudiantes.TabIndex = 1;
             // 
             // gbxReportes
             // 
+            this.gbxReportes.BackColor = System.Drawing.Color.White;
             this.gbxReportes.Controls.Add(this.lblAprobados);
             this.gbxReportes.Controls.Add(this.lblNotaMenor);
             this.gbxReportes.Controls.Add(this.lblNotaMayor);
             this.gbxReportes.Controls.Add(this.lblPromedio);
             this.gbxReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxReportes.Location = new System.Drawing.Point(568, 294);
+            this.gbxReportes.Location = new System.Drawing.Point(568, 336);
             this.gbxReportes.Name = "gbxReportes";
             this.gbxReportes.Size = new System.Drawing.Size(264, 213);
             this.gbxReportes.TabIndex = 2;
@@ -119,7 +120,7 @@
             // btnCalcular
             // 
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(440, 294);
+            this.btnCalcular.Location = new System.Drawing.Point(439, 357);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(122, 67);
             this.btnCalcular.TabIndex = 3;
@@ -130,7 +131,7 @@
             // btnCargarDatos
             // 
             this.btnCargarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarDatos.Location = new System.Drawing.Point(440, 375);
+            this.btnCargarDatos.Location = new System.Drawing.Point(440, 446);
             this.btnCargarDatos.Name = "btnCargarDatos";
             this.btnCargarDatos.Size = new System.Drawing.Size(121, 61);
             this.btnCargarDatos.TabIndex = 4;
@@ -142,7 +143,8 @@
             // 
             this.lblCarnet.AutoSize = true;
             this.lblCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCarnet.Location = new System.Drawing.Point(26, 294);
+            this.lblCarnet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCarnet.Location = new System.Drawing.Point(32, 357);
             this.lblCarnet.Name = "lblCarnet";
             this.lblCarnet.Size = new System.Drawing.Size(77, 24);
             this.lblCarnet.TabIndex = 5;
@@ -152,7 +154,8 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(26, 325);
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNombre.Location = new System.Drawing.Point(31, 391);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(91, 24);
             this.lblNombre.TabIndex = 6;
@@ -162,7 +165,8 @@
             // 
             this.lblApellido.AutoSize = true;
             this.lblApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(26, 362);
+            this.lblApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblApellido.Location = new System.Drawing.Point(29, 425);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(93, 24);
             this.lblApellido.TabIndex = 7;
@@ -170,21 +174,21 @@
             // 
             // txtCarnet
             // 
-            this.txtCarnet.Location = new System.Drawing.Point(117, 294);
+            this.txtCarnet.Location = new System.Drawing.Point(117, 357);
             this.txtCarnet.Name = "txtCarnet";
             this.txtCarnet.Size = new System.Drawing.Size(159, 20);
             this.txtCarnet.TabIndex = 8;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(117, 325);
+            this.txtNombre.Location = new System.Drawing.Point(117, 393);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(191, 20);
             this.txtNombre.TabIndex = 9;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(115, 367);
+            this.txtApellido.Location = new System.Drawing.Point(117, 429);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(193, 20);
             this.txtApellido.TabIndex = 10;
@@ -193,7 +197,8 @@
             // 
             this.lblNota.AutoSize = true;
             this.lblNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNota.Location = new System.Drawing.Point(26, 393);
+            this.lblNota.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblNota.Location = new System.Drawing.Point(29, 464);
             this.lblNota.Name = "lblNota";
             this.lblNota.Size = new System.Drawing.Size(59, 24);
             this.lblNota.TabIndex = 11;
@@ -201,7 +206,7 @@
             // 
             // txtNota
             // 
-            this.txtNota.Location = new System.Drawing.Point(117, 397);
+            this.txtNota.Location = new System.Drawing.Point(117, 464);
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(100, 20);
             this.txtNota.TabIndex = 12;
@@ -210,7 +215,8 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(26, 424);
+            this.lblEstado.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblEstado.Location = new System.Drawing.Point(29, 496);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(80, 24);
             this.lblEstado.TabIndex = 13;
@@ -224,7 +230,7 @@
             "Aprobado",
             "",
             "Reprobado"});
-            this.cmbEstado.Location = new System.Drawing.Point(117, 427);
+            this.cmbEstado.Location = new System.Drawing.Point(117, 496);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
             this.cmbEstado.TabIndex = 14;
@@ -232,7 +238,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(21, 464);
+            this.btnGuardar.Location = new System.Drawing.Point(23, 531);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(117, 43);
             this.btnGuardar.TabIndex = 15;
@@ -243,7 +249,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(406, 464);
+            this.btnEditar.Location = new System.Drawing.Point(408, 529);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(125, 45);
             this.btnEditar.TabIndex = 16;
@@ -254,7 +260,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(144, 464);
+            this.btnEliminar.Location = new System.Drawing.Point(146, 531);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(125, 43);
             this.btnEliminar.TabIndex = 17;
@@ -265,7 +271,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(275, 464);
+            this.btnLimpiar.Location = new System.Drawing.Point(277, 531);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(125, 43);
             this.btnLimpiar.TabIndex = 18;
@@ -277,7 +283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 519);
+            this.ClientSize = new System.Drawing.Size(844, 583);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -298,6 +304,7 @@
             this.Controls.Add(this.dgvEstudiantes);
             this.Name = "frmControlCalificaciones";
             this.Text = "Sistema De Control De Calificaciones";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.frmControlCalificaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
             this.gbxReportes.ResumeLayout(false);

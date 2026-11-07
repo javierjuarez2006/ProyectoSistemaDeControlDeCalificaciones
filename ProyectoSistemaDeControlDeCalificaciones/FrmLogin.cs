@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace ProyectoSistemaDeControlDeCalificaciones
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
         // La misma cadena de conexión LocalDB que usas en tu otro formulario
         private readonly string cadenaConexion = @"Server=(localdb)\MSSQLLocalDB;Database=ControlCalificaciones;Trusted_Connection=True;";
