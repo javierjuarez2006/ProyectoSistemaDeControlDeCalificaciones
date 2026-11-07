@@ -305,6 +305,7 @@
             this.Name = "frmControlCalificaciones";
             this.Text = "Sistema De Control De Calificaciones";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.frmControlCalificaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).EndInit();
             this.gbxReportes.ResumeLayout(false);
