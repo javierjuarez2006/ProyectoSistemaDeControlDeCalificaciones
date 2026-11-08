@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Globalization;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace ProyectoSistemaDeControlDeCalificaciones
 {
@@ -340,5 +341,27 @@ namespace ProyectoSistemaDeControlDeCalificaciones
                 lblAprobados.Text = $"Aprobados: {aprobados} | Reprobados: {reprobados}";
             }
         }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+        "¿Estás seguro de que deseas cerrar sesión?",
+        "Cerrar Sesión",
+        MessageBoxButtons.YesNo,
+        MessageBoxIcon.Question
+    );
+
+            if (resultado == DialogResult.Yes)
+            {
+                // 2. Crear una nueva instancia del formulario de Login y mostrarlo
+                frmLogin login = new frmLogin();
+                login.Show();
+
+                // 3. Cerrar el formulario actual de calificaciones
+                this.Close();
+            }
+        }
     }
 }
+
+

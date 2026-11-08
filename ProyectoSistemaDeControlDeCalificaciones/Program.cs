@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace ProyectoSistemaDeControlDeCalificaciones
@@ -77,18 +79,23 @@ namespace ProyectoSistemaDeControlDeCalificaciones
 
                         IF NOT EXISTS (SELECT * FROM Usuarios WHERE Usuario = 'admin')
                         INSERT INTO Usuarios (Usuario, Password, Rol) VALUES ('admin', '1234', 'Profesor');
+                    
+                       IF NOT EXISTS (SELECT * FROM Usuarios WHERE Usuario = 'Javier')
+                       INSERT INTO Usuarios (Usuario, Password, Rol) VALUES('Javier', '1234', 'Alumno');
 
-                        IF NOT EXISTS (SELECT * FROM Usuarios WHERE Usuario = 'alumno')
-                        INSERT INTO Usuarios (Usuario, Password, Rol) VALUES ('alumno', '1234', 'Alumno');";
+                    IF NOT EXISTS (SELECT * FROM Usuarios WHERE Usuario = 'Yaquelin')
+    INSERT INTO Usuarios (Usuario, Password, Rol) VALUES('Yaquelin', '1234', 'Alumno');
+
+                    IF NOT EXISTS (SELECT * FROM Usuarios WHERE Usuario = 'Adan')
+    INSERT INTO Usuarios (Usuario, Password, Rol) VALUES('Adan', '1234', 'Alumno');
+
+                    IF NOT EXISTS (SELECT * FROM Usuarios WHERE Usuario = 'Diego')
+    INSERT INTO Usuarios (Usuario, Password, Rol) VALUES('Diego', '1234', 'Alumno');";
 
                     SqlCommand cmdTablas = new SqlCommand(queryTablas, conexion);
                     cmdTablas.ExecuteNonQuery();
-                }
-            }
+                }}
             catch (Exception ex)
             {
                 MessageBox.Show("Error al inicializar la BD global: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-    }
-}
+            }}}}

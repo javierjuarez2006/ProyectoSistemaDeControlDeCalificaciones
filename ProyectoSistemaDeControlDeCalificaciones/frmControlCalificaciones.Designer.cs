@@ -50,6 +50,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstudiantes)).BeginInit();
             this.gbxReportes.SuspendLayout();
             this.SuspendLayout();
@@ -70,7 +71,7 @@
             this.gbxReportes.Controls.Add(this.lblNotaMayor);
             this.gbxReportes.Controls.Add(this.lblPromedio);
             this.gbxReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxReportes.Location = new System.Drawing.Point(568, 336);
+            this.gbxReportes.Location = new System.Drawing.Point(567, 336);
             this.gbxReportes.Name = "gbxReportes";
             this.gbxReportes.Size = new System.Drawing.Size(264, 213);
             this.gbxReportes.TabIndex = 2;
@@ -101,7 +102,7 @@
             // 
             this.lblNotaMayor.AutoSize = true;
             this.lblNotaMayor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNotaMayor.Location = new System.Drawing.Point(7, 90);
+            this.lblNotaMayor.Location = new System.Drawing.Point(7, 89);
             this.lblNotaMayor.Name = "lblNotaMayor";
             this.lblNotaMayor.Size = new System.Drawing.Size(170, 24);
             this.lblNotaMayor.TabIndex = 1;
@@ -122,7 +123,7 @@
             this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalcular.Location = new System.Drawing.Point(439, 357);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(122, 67);
+            this.btnCalcular.Size = new System.Drawing.Size(123, 67);
             this.btnCalcular.TabIndex = 3;
             this.btnCalcular.Text = "Calcular Estadísticas";
             this.btnCalcular.UseVisualStyleBackColor = true;
@@ -131,9 +132,9 @@
             // btnCargarDatos
             // 
             this.btnCargarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarDatos.Location = new System.Drawing.Point(440, 446);
+            this.btnCargarDatos.Location = new System.Drawing.Point(441, 446);
             this.btnCargarDatos.Name = "btnCargarDatos";
-            this.btnCargarDatos.Size = new System.Drawing.Size(121, 61);
+            this.btnCargarDatos.Size = new System.Drawing.Size(122, 61);
             this.btnCargarDatos.TabIndex = 4;
             this.btnCargarDatos.Text = "Refrescar Datos";
             this.btnCargarDatos.UseVisualStyleBackColor = true;
@@ -144,7 +145,7 @@
             this.lblCarnet.AutoSize = true;
             this.lblCarnet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarnet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCarnet.Location = new System.Drawing.Point(32, 357);
+            this.lblCarnet.Location = new System.Drawing.Point(33, 357);
             this.lblCarnet.Name = "lblCarnet";
             this.lblCarnet.Size = new System.Drawing.Size(77, 24);
             this.lblCarnet.TabIndex = 5;
@@ -155,7 +156,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblNombre.Location = new System.Drawing.Point(31, 391);
+            this.lblNombre.Location = new System.Drawing.Point(31, 392);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(91, 24);
             this.lblNombre.TabIndex = 6;
@@ -176,7 +177,7 @@
             // 
             this.txtCarnet.Location = new System.Drawing.Point(117, 357);
             this.txtCarnet.Name = "txtCarnet";
-            this.txtCarnet.Size = new System.Drawing.Size(159, 20);
+            this.txtCarnet.Size = new System.Drawing.Size(100, 20);
             this.txtCarnet.TabIndex = 8;
             // 
             // txtNombre
@@ -238,7 +239,7 @@
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(23, 531);
+            this.btnGuardar.Location = new System.Drawing.Point(22, 548);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(117, 43);
             this.btnGuardar.TabIndex = 15;
@@ -249,7 +250,7 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(408, 529);
+            this.btnEditar.Location = new System.Drawing.Point(408, 548);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(125, 45);
             this.btnEditar.TabIndex = 16;
@@ -260,7 +261,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(146, 531);
+            this.btnEliminar.Location = new System.Drawing.Point(147, 548);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(125, 43);
             this.btnEliminar.TabIndex = 17;
@@ -271,7 +272,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(277, 531);
+            this.btnLimpiar.Location = new System.Drawing.Point(278, 548);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(125, 43);
             this.btnLimpiar.TabIndex = 18;
@@ -279,11 +280,24 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(567, 565);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(254, 47);
+            this.btnCerrarSesion.TabIndex = 19;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // frmControlCalificaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 583);
+            this.ClientSize = new System.Drawing.Size(843, 618);
+            this.Controls.Add(this.btnCerrarSesion);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
@@ -302,8 +316,11 @@
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.gbxReportes);
             this.Controls.Add(this.dgvEstudiantes);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmControlCalificaciones";
-            this.Text = "Sistema De Control De Calificaciones";
+            this.Padding = new System.Windows.Forms.Padding(21, 60, 21, 20);
+            this.Text = "SISTEMA DE CONTROL DE CALIFICACIONES";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Red;
             this.Load += new System.EventHandler(this.frmControlCalificaciones_Load);
@@ -338,6 +355,7 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnCerrarSesion;
     }
 }
 
