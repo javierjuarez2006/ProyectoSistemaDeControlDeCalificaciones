@@ -124,7 +124,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.btnRegresar.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegresar.Location = new System.Drawing.Point(284, 383);
+            this.btnRegresar.Location = new System.Drawing.Point(289, 381);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(177, 55);
             this.btnRegresar.TabIndex = 4;
