@@ -34,6 +34,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnAutores = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -101,11 +102,24 @@
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
+            // btnAutores
+            // 
+            this.btnAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAutores.Location = new System.Drawing.Point(10, 289);
+            this.btnAutores.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAutores.Name = "btnAutores";
+            this.btnAutores.Size = new System.Drawing.Size(201, 57);
+            this.btnAutores.TabIndex = 2;
+            this.btnAutores.Text = "VER AUTORES DEL PROYECTO";
+            this.btnAutores.UseVisualStyleBackColor = true;
+            this.btnAutores.Click += new System.EventHandler(this.btnIngresar_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(933, 369);
+            this.Controls.Add(this.btnAutores);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsuario);
@@ -118,6 +132,7 @@
             this.Name = "frmLogin";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
             this.Text = "Formulario de Inicio de Sesiòn";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Red;
             this.ResumeLayout(false);
@@ -133,5 +148,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.Button btnAutores;
     }
 }

@@ -18,8 +18,28 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             InitializeComponent();
         }
 
+
+
+
+
+
+
+
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+
+            // Abrimos el formulario de autores
+            frmAutores formAutores = new frmAutores();
+            formAutores.ShowDialog(); // Usamos ShowDialog para que se abra como ventana superpuesta
+        
+
+
+
+
+
+
+
+
             // Validar que no vayan vacíos los campos
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
             {
