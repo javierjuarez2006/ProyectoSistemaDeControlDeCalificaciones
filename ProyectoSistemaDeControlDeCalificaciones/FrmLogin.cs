@@ -24,23 +24,9 @@ namespace ProyectoSistemaDeControlDeCalificaciones
 
 
 
-
+        // 1. Este es el evento exclusivo de tu botón de Ingresar (el que valida usuario, contraseña y base de datos)
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
-            // Abrimos el formulario de autores
-            frmAutores formAutores = new frmAutores();
-            formAutores.ShowDialog(); // Usamos ShowDialog para que se abra como ventana superpuesta
-        
-
-
-
-
-
-
-
-
-            // Validar que no vayan vacíos los campos
             if (string.IsNullOrWhiteSpace(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
             {
                 MessageBox.Show("Por favor, ingrese el usuario y la contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -52,8 +38,6 @@ namespace ProyectoSistemaDeControlDeCalificaciones
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
                     conexion.Open();
-
-                    // Consultamos el Rol del usuario en la base de datos
                     string query = "SELECT Rol FROM Usuarios WHERE Usuario = @Usuario AND Password = @Password";
                     SqlCommand cmd = new SqlCommand(query, conexion);
                     cmd.Parameters.AddWithValue("@Usuario", txtUsuario.Text.Trim());
@@ -61,50 +45,29 @@ namespace ProyectoSistemaDeControlDeCalificaciones
 
                     object resultado = cmd.ExecuteScalar();
 
-                    // Si encuentra el registro, el resultado no es nulo
                     if (resultado != null)
                     {
-                        // Reiniciamos los intentos si entra con éxito
                         intentosFallidos = 0;
-
-                        string rolUsuario = resultado.ToString(); // Obtiene 'Profesor' o 'Estudiante'
+                        string rolUsuario = resultado.ToString();
 
                         MessageBox.Show($"¡Bienvenido! Acceso concedido como: {rolUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Abrimos el formulario principal y le enviamos el rol detectado
                         frmControlCalificaciones formPrincipal = new frmControlCalificaciones(rolUsuario);
                         formPrincipal.Show();
-
-                        // Ocultamos la ventana de login actual
                         this.Hide();
                     }
                     else
                     {
-                        // Incrementamos el contador de intentos fallidos
                         intentosFallidos++;
 
-                        if (intentosFallidos >= MAX_INTENTOS)
+                        if (intentosFallidos >= 3)
                         {
-                            MessageBox.Show(
-                                "Has superado el límite de 3 intentos permitidos.\nPor favor, comunícate con tu encargado para restablecer el acceso.",
-                                "Acceso Bloqueado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-
-                            // Cierra la aplicación por completo
+                            MessageBox.Show("Has superado el límite de 3 intentos permitidos.", "Acceso Bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             Application.Exit();
                         }
                         else
                         {
-                            int intentosRestantes = MAX_INTENTOS - intentosFallidos;
-                            MessageBox.Show(
-                                $"Usuario o contraseña incorrectos.\nIntentos restantes: {intentosRestantes}",
-                                "Error de Autenticación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
-
+                            MessageBox.Show($"Usuario o contraseña incorrectos. Intentos restantes: {3 - intentosFallidos}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             txtPassword.Clear();
                             txtUsuario.Focus();
                         }
@@ -113,8 +76,15 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al conectar: " + ex.Message);
             }
         }
+
+        // 2. Este es el evento exclusivo de tu botón "Ver Autores del Proyecto"
+        private void btnVerAutores_Click(object sender, EventArgs e)
+        {
+            frmAutores formAutores = new frmAutores();
+            formAutores.ShowDialog();
+        }
     }
-}
+} 

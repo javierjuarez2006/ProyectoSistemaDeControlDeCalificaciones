@@ -112,7 +112,7 @@
             this.btnAutores.TabIndex = 2;
             this.btnAutores.Text = "VER AUTORES DEL PROYECTO";
             this.btnAutores.UseVisualStyleBackColor = true;
-            this.btnAutores.Click += new System.EventHandler(this.btnIngresar_Click);
+            this.btnAutores.Click += new System.EventHandler(this.btnVerAutores_Click);
             // 
             // frmLogin
             // 
