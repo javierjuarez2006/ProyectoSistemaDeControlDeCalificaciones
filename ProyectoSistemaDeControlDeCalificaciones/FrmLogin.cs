@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace ProyectoSistemaDeControlDeCalificaciones
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
-        // La misma cadena de conexión LocalDB que usas en tu otro formulario
-        private readonly string cadenaConexion = @"Server=(localdb)\MSSQLLocalDB;Database=ControlCalificaciones;Trusted_Connection=True;";
+        private readonly string cadenaConexion =
+    ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
 
         // Variables para controlar el límite de 3 intentos fallidos
         private int intentosFallidos = 0;
@@ -17,7 +18,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
         {
             InitializeComponent();
         }
-
+        
 
 
 

@@ -4,12 +4,16 @@ using System.Data.SqlClient;
 using System.Globalization;
 using System.Windows.Forms;
 using MetroFramework.Forms;
+using System.Configuration;
 
 namespace ProyectoSistemaDeControlDeCalificaciones
 {
     public partial class frmControlCalificaciones : MetroFramework.Forms.MetroForm
     {
-        private readonly string cadenaConexion = @"Server=(localdb)\MSSQLLocalDB;Database=ControlCalificaciones;Trusted_Connection=True;";
+
+        private readonly string cadenaConexion =
+ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
+        
         private string rolActual = "";
 
         // Constructor que recibe el rol desde el Login
