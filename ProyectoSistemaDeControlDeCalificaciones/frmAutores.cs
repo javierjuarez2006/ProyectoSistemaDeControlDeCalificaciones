@@ -27,13 +27,14 @@ namespace ProyectoSistemaDeControlDeCalificaciones
         private System.Windows.Forms.Label label6;
         private MetroFramework.Controls.MetroButton btnRegresar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAutores));
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnRegresar = new MetroFramework.Controls.MetroButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -68,9 +69,9 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(23, 63);
+            this.metroPanel1.Location = new System.Drawing.Point(23, 46);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(749, 504);
+            this.metroPanel1.Size = new System.Drawing.Size(740, 521);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -80,7 +81,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.btnRegresar.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegresar.Location = new System.Drawing.Point(299, 423);
+            this.btnRegresar.Location = new System.Drawing.Point(273, 408);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(177, 55);
             this.btnRegresar.TabIndex = 4;
@@ -92,7 +93,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 318);
+            this.label5.Location = new System.Drawing.Point(19, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(293, 24);
             this.label5.TabIndex = 3;
@@ -102,7 +103,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 207);
+            this.label4.Location = new System.Drawing.Point(394, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(336, 24);
             this.label4.TabIndex = 3;
@@ -112,7 +113,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 118);
+            this.label3.Location = new System.Drawing.Point(394, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(299, 24);
             this.label3.TabIndex = 3;
@@ -122,7 +123,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 43);
+            this.label2.Location = new System.Drawing.Point(3, 6);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(336, 24);
             this.label2.TabIndex = 3;
@@ -142,7 +143,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             this.label6.BackColor = System.Drawing.Color.White;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(266, 19);
+            this.label6.Location = new System.Drawing.Point(261, 19);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(284, 24);
             this.label6.TabIndex = 3;
@@ -150,38 +151,42 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(407, 43);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(60, 248);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(407, 118);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(490, 248);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(151, 165);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(407, 207);
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(490, 43);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(153, 150);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(407, 318);
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(95, 43);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(119, 160);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             // 
             // frmAutores
