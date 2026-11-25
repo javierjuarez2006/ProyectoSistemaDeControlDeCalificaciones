@@ -42,22 +42,22 @@
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblTitulo.Location = new System.Drawing.Point(312, 60);
+            this.lblTitulo.Location = new System.Drawing.Point(233, 60);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(239, 39);
+            this.lblTitulo.Size = new System.Drawing.Size(448, 61);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Iniciar Sesión";
+            this.lblTitulo.Text = "INICIAR SESIÓN";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblUsuario.Location = new System.Drawing.Point(245, 128);
+            this.lblUsuario.Location = new System.Drawing.Point(227, 128);
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(132, 33);
+            this.lblUsuario.Size = new System.Drawing.Size(193, 52);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -66,37 +66,37 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblPassword.Location = new System.Drawing.Point(235, 190);
+            this.lblPassword.Location = new System.Drawing.Point(173, 180);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(184, 33);
+            this.lblPassword.Size = new System.Drawing.Size(270, 52);
             this.lblPassword.TabIndex = 0;
             this.lblPassword.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(407, 141);
+            this.txtUsuario.Location = new System.Drawing.Point(361, 137);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(103, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(143, 26);
             this.txtUsuario.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(427, 203);
+            this.txtPassword.Location = new System.Drawing.Point(361, 192);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(83, 20);
+            this.txtPassword.Size = new System.Drawing.Size(143, 26);
             this.txtPassword.TabIndex = 1;
             // 
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(391, 246);
+            this.btnIngresar.Location = new System.Drawing.Point(287, 235);
             this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(160, 57);
+            this.btnIngresar.Size = new System.Drawing.Size(156, 57);
             this.btnIngresar.TabIndex = 2;
             this.btnIngresar.Text = "INGRESAR";
             this.btnIngresar.UseVisualStyleBackColor = true;
@@ -105,10 +105,10 @@
             // btnAutores
             // 
             this.btnAutores.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAutores.Location = new System.Drawing.Point(10, 289);
+            this.btnAutores.Location = new System.Drawing.Point(9, 15);
             this.btnAutores.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnAutores.Name = "btnAutores";
-            this.btnAutores.Size = new System.Drawing.Size(201, 57);
+            this.btnAutores.Size = new System.Drawing.Size(201, 82);
             this.btnAutores.TabIndex = 2;
             this.btnAutores.Text = "VER AUTORES DEL PROYECTO";
             this.btnAutores.UseVisualStyleBackColor = true;
@@ -116,9 +116,9 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 369);
+            this.ClientSize = new System.Drawing.Size(708, 318);
             this.Controls.Add(this.btnAutores);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtPassword);
@@ -131,8 +131,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmLogin";
             this.Padding = new System.Windows.Forms.Padding(23, 60, 23, 20);
-            this.Text = "Formulario de Inicio de Sesiòn";
-            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransparencyKey = System.Drawing.Color.Red;
             this.ResumeLayout(false);

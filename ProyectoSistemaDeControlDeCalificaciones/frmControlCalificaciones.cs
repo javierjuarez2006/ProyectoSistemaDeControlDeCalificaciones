@@ -39,7 +39,7 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
 
         private void AplicarPermisosSegunRol()
         {
-            if (rolActual == "Alumno")
+            if (rolActual == "Estudiante")
             {
                 // Si es Alumno, ocultamos y deshabilitamos herramientas de mantenimiento (CRUD)
                 btnGuardar.Enabled = false;
@@ -58,7 +58,7 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
                 txtNota.ReadOnly = true;
                 cmbEstado.Enabled = false;
 
-                this.Text = "Sistema de Control de Calificaciones - [Vista de Alumno: Solo Lectura]";
+                this.Text = "Sistema de Control de Calificaciones - [Vista de Estudiante: Solo Lectura]";
             }
             else
             {

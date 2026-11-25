@@ -71,7 +71,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(23, 46);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(740, 521);
+            this.metroPanel1.Size = new System.Drawing.Size(813, 510);
             this.metroPanel1.TabIndex = 1;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -80,7 +80,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(95, 43);
+            this.pictureBox4.Location = new System.Drawing.Point(129, 43);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(119, 160);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +90,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(490, 43);
+            this.pictureBox3.Location = new System.Drawing.Point(513, 53);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(153, 150);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +100,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(490, 248);
+            this.pictureBox2.Location = new System.Drawing.Point(515, 257);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(151, 165);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(60, 248);
+            this.pictureBox1.Location = new System.Drawing.Point(106, 257);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(178, 165);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +121,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.btnRegresar.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnRegresar.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnRegresar.Location = new System.Drawing.Point(277, 409);
+            this.btnRegresar.Location = new System.Drawing.Point(304, 411);
             this.btnRegresar.Name = "btnRegresar";
             this.btnRegresar.Size = new System.Drawing.Size(177, 55);
             this.btnRegresar.TabIndex = 4;
@@ -133,9 +133,9 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 221);
+            this.label5.Location = new System.Drawing.Point(3, 221);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(293, 24);
+            this.label5.Size = new System.Drawing.Size(440, 33);
             this.label5.TabIndex = 3;
             this.label5.Text = "Diego Enmanuel Umaña Rivas";
             // 
@@ -143,9 +143,9 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(394, 221);
+            this.label4.Location = new System.Drawing.Point(384, 221);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(336, 24);
+            this.label4.Size = new System.Drawing.Size(501, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "Yaquelin Ixela Echeverria Vasquez";
             // 
@@ -153,9 +153,9 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(394, 6);
+            this.label3.Location = new System.Drawing.Point(399, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(299, 24);
+            this.label3.Size = new System.Drawing.Size(437, 33);
             this.label3.TabIndex = 3;
             this.label3.Text = "Adan Enrique Cushco Shunico";
             // 
@@ -165,7 +165,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 6);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(336, 24);
+            this.label2.Size = new System.Drawing.Size(503, 33);
             this.label2.TabIndex = 3;
             this.label2.Text = "Javier Alejandro Echeverria Juarez";
             // 
@@ -174,7 +174,7 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(43, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 2;
             // 
             // label6
@@ -185,13 +185,13 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Location = new System.Drawing.Point(261, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(284, 24);
+            this.label6.Size = new System.Drawing.Size(428, 33);
             this.label6.TabIndex = 3;
             this.label6.Text = "INTEGRANTES DEL EQUIPO";
             // 
             // frmAutores
             // 
-            this.ClientSize = new System.Drawing.Size(795, 579);
+            this.ClientSize = new System.Drawing.Size(861, 579);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.metroPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
