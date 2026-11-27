@@ -11,10 +11,19 @@ namespace ProyectoSistemaDeControlDeCalificaciones
     public partial class frmControlCalificaciones : MetroFramework.Forms.MetroForm
     {
 
+
+
+
         private readonly string cadenaConexion =
 ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
         
         private string rolActual = "";
+
+
+
+
+
+
 
         // Constructor que recibe el rol desde el Login
         public frmControlCalificaciones(string rol)
@@ -28,6 +37,8 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
         {
         }
 
+
+
         private void frmControlCalificaciones_Load(object sender, EventArgs e)
         {
             // Paso 1: Carga los datos en el DataGridView
@@ -36,6 +47,12 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             // Paso 2: Aplica restricciones según el rol (Profesor o Alumno)
             AplicarPermisosSegunRol();
         }
+
+
+
+
+
+
 
         private void AplicarPermisosSegunRol()
         {
@@ -65,6 +82,12 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
                 this.Text = "Sistema de Control de Calificaciones - [Vista de Profesor: Control Total]";
             }
         }
+
+
+
+
+
+
 
         private void CargarDatosEnTabla()
         {
@@ -106,11 +129,27 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             }
         }
 
+
+
+
+
+
+
+
+
+
+
         private void btnCargarDatos_Click(object sender, EventArgs e)
         {
             CargarDatosEnTabla();
             LimpiarCampos();
         }
+
+
+
+
+
+
 
         // BOTÓN GUARDAR / ACTUALIZAR (El botón izquierdo principal)
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -131,6 +170,13 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
                 MessageBox.Show("El formato de la nota no es válido. Ingrese un número correcto.", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+
+
+
+
+
+
 
             // SI EL BOTÓN DICE "Guardar": Inserta un estudiante nuevo
             if (btnGuardar.Text == "Guardar")
@@ -171,6 +217,11 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
                     MessageBox.Show("Error al guardar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+
+
+
+
             else // SI EL BOTÓN CAMBIÓ A "Actualizar": Aplica la modificación en la base de datos
             {
                 if (dgvEstudiantes.CurrentRow == null || dgvEstudiantes.CurrentRow.Index < 0)
@@ -219,6 +270,12 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             }
         }
 
+
+
+
+
+
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dgvEstudiantes.CurrentRow == null || dgvEstudiantes.CurrentRow.Index < 0)
@@ -239,6 +296,13 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
                 btnGuardar.Text = "Actualizar";
             }
         }
+
+
+
+
+
+
+
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -281,11 +345,22 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             }
         }
 
+
+
+
+
+
+
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
             dgvEstudiantes.ClearSelection();
         }
+
+
+
+
 
         private void LimpiarCampos()
         {
@@ -297,6 +372,10 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
             btnGuardar.Text = "Guardar";
             txtCarnet.Focus();
         }
+
+
+
+
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
@@ -345,6 +424,13 @@ ConfigurationManager.ConnectionStrings["ConexionBD"].ConnectionString;
                 lblAprobados.Text = $"Aprobados: {aprobados} | Reprobados: {reprobados}";
             }
         }
+
+
+
+
+
+
+
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {

@@ -14,6 +14,10 @@ namespace ProyectoSistemaDeControlDeCalificaciones
         private int intentosFallidos = 0;
         private const int MAX_INTENTOS = 3;
 
+
+
+
+
         public frmLogin()
         {
             InitializeComponent();
@@ -81,7 +85,12 @@ namespace ProyectoSistemaDeControlDeCalificaciones
             }
         }
 
-        // 2. Este es el evento exclusivo de tu botón "Ver Autores del Proyecto"
+
+
+
+
+
+        // 2. Este es el evento exclusivo del botón "Ver Autores del Proyecto"
         private void btnVerAutores_Click(object sender, EventArgs e)
         {
             frmAutores formAutores = new frmAutores();
